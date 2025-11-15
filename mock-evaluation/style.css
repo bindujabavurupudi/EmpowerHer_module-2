@@ -1,0 +1,57 @@
+
+
+.website{
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    align-items: center;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    padding: auto;
+    box-shadow: 2px 2px 2px grey;
+    color: rgb(47, 114, 202);
+    justify-content: space-around;
+
+}
+
+.sections{
+    display: flex;
+    gap: 50px;
+    margin: auto;
+}
+.download-button{
+    background-color: red;
+    padding: 13px;
+    border: none;
+    color: white;
+}
+.dominos{
+    margin-left: 10px;
+}
+.download{
+    margin-right: 10px;
+}
+.order{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, auto));
+    gap: 3px;
+    width: 820px;
+}
+.item{
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    height: 280px;
+    width: 250px;
+    background-color: red;
+    color: white;
+}
+.view-button{
+    padding: 8px;
+}
