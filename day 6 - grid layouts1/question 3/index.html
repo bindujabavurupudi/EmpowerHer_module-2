@@ -6,15 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product showcase box</title>
     <style>
-        .container {}
+        * {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
 
-        .watch {
-            width: 200px;
+        .container {
+            padding: 20px;
+            gap: 10px;
+            box-shadow: 3px 3px 10px lightgray;
+            margin: auto;
+            display: flex;
+            width: 400px;
+            height: 550px;
+            flex-direction: column;
+            border: 1px solid lightgray;
 
         }
 
-        .rating {
+        .cost{
+            margin-top: 0px;
             display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .logo{
+            margin-top: 0px;
+            width: 90px;
+            height: 20px;
+        }
+        
+        .rating {
+            margin-top: 0px;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+        }
+        span{
+            height: 21px;
+            width: 45px;
+            text-align: center;
+            border-radius: 3px;
+        }
+        .watch{
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -23,21 +60,21 @@
     <div class="container">
         <img class="watch"
             src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/w/x/h/-original-imahfa7xspmxemvj.jpeg"
-            alt="">
+            alt="" width="300px">
         <h3><b>SAMSUNG Galaxy Watch6 LTE</b></h3>
-        <p>Graphite Strap, 44mm</p>
+        <p style="color: gray;">Graphite Strap, 44mm</p>
         <div class="rating">
             <span style="background-color: green; color: white;">4.3★</span>
-            <h4>(973) </h4>
+            <h4 style="color: gray;">(973) </h4>
             <img class="logo"
-                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="">
+                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="" width="50px">
         </div>
         <div class="cost">
             <p>₹18,999</p>
-            <p><del>₹41,999</del></p>
+            <p style="color: gray;"><del>₹41,999</del></p>
             <h3 style="color:green;">54% off</h3>
         </div>
-
+        <p style="color: green; font-weight: bold;">Bank Offer</p>
     </div>
 </body>
 
