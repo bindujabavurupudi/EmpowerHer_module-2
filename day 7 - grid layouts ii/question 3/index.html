@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 300px;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(60px, 1fr));
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+            padding: 50px;
+            gap: 15px;
+            margin: auto;
+        }
+        .box{
+            width: minmax(60px, 100px);
+            height: 60px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .first{
+            grid-column: span 4;
+        }
+        .black{
+            background-color: black;
+            color: white;
+        }
+        .red{
+            background-color: red;
+            color: white;
+        }
+        h1{
+            text-align: center;
+            margin: 60px;
+            font-weight: bold;
+            font-size: 50px;
+            color: rgb(55, 111, 116);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(55, 111, 116);">Masai Calculator</h1>
+    <div class="container">
+        <div class="box first"></div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box ">3</div>
+        <div class="box black">+</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box ">6</div>
+        <div class="box black">-</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box ">9</div>
+        <div class="box black">X</div>
+        <div class=" red box">C</div>
+        <div class="box">0</div>
+        <div class="box black">=</div>
+        <div class="box black">/</div>
+    </div>
+</body>
+</html>

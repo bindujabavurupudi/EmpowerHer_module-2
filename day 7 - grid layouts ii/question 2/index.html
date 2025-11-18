@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Lobster, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .wrapper {
+            width: 1300px;
+            display: grid;
+            grid-template-columns: repeat(6, 200px);
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 80px;
+            margin: 20px;
+        }
+
+        .box {
+            width: minmax(200px, auto);
+            height: 60px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .col-start {
+            grid-column: span 1;
+        }
+
+        .catA {
+            background-color: rgba(251, 211, 217, 0.984);
+        }
+
+        .catB {
+            background-color: rgb(239, 239, 174);
+        }
+
+        .slot {
+            background-color: rgb(181, 222, 247);
+        }
+
+        .note-row {
+            grid-column: span 6;
+            margin-top: 25px;
+            width: minmax(200px, auto);
+            height: 60px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">&#10024; Weekly Schedule &#10024;</div>
+
+    <div class="wrapper">
+
+        <!-- row 1 -->
+        <div class="box col-start"></div>
+        <div class="box catA">Mon</div>
+        <div class="box catB">Tue</div>
+        <div class="box catA">Wed</div>
+        <div class="box catB">Thu</div>
+        <div class="box catA">Fri</div>
+
+        <!-- row 2 -->
+        <div class="box slot">08:00</div>
+        <div class="box catA">English</div>
+        <div class="box catB">Maths</div>
+        <div class="box catA">Science</div>
+        <div class="box catB">Social</div>
+        <div class="box catA">Telugu</div>
+
+        <!-- row 3 -->
+        <div class="box slot">09:00</div>
+        <div class="box catA">Hindi</div>
+        <div class="box catB">Science</div>
+        <div class="box catA">Maths</div>
+        <div class="box catB">English</div>
+        <div class="box catA">Games</div>
+
+        <!-- row 4 -->
+        <div class="box slot">10:00</div>
+        <div class="box catA">Singing</div>
+        <div class="box catB">Social</div>
+        <div class="box catA">Dancing</div>
+        <div class="box catB">Telugu</div>
+        <div class="box catA">Hindi</div>
+
+        <!-- row 5 -->
+        <div class="box slot">11:00</div>
+        <div class="box catA">Science</div>
+        <div class="box catB">Games</div>
+        <div class="box catA">Maths</div>
+        <div class="box catB">English</div>
+        <div class="box catA">Social</div>
+
+        <!-- row 6 -->
+        <div class="box slot">12:00</div>
+        <div class="box catA">Sleeping</div>
+        <div class="box catB">Sleeping</div>
+        <div class="box catA">Sleeping</div>
+        <div class="box catB">Sleeping</div>
+        <div class="box catA">Sleeping</div>
+
+        <!-- row 7 -->
+        <div class="box slot">13:00</div>
+        <div class="box catA">Lunch</div>
+        <div class="box catB">Lunch</div>
+        <div class="box catA">Lunch</div>
+        <div class="box catB">Lunch</div>
+        <div class="box catA">Lunch</div>
+
+        <!-- row 8 -->
+        <div class="box slot">14:00</div>
+        <div class="box catA">Maths</div>
+        <div class="box catB">English</div>
+        <div class="box catA">Science</div>
+        <div class="box catB">Games</div>
+        <div class="box catA">Social</div>
+
+        <!-- row 9 -->
+        <div class="box slot">15:00</div>
+        <div class="box catA">PT</div>
+        <div class="box catB">Hindi</div>
+        <div class="box catA">Dancing</div>
+        <div class="box catB">Singing</div>
+        <div class="box catA">Science</div>
+
+        <!-- row 10 -->
+        <div class="box slot">16:00</div>
+        <div class="box catA">English</div>
+        <div class="box catB">Maths</div>
+        <div class="box catA">Social</div>
+        <div class="box catB">Singing</div>
+        <div class="box catA">Games</div>
+
+        <!-- row 11 -->
+        <div class="note-row slot">
+            <p style="margin: 11px;">Note:</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
