@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 330px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 5px;
+            /* margin: auto; */
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style = "background-color: red;" class="box">2.</div>
+        <div style = "background-color: blue;" class="box">3.</div>
+        <div style = "background-color: yellow;" class="box">4.</div>
+        <div style = "background-color: rgb(166, 83, 222);" class="box">5.</div>
+        <div style = "background-color:rgb(71, 238, 71);" class="box">6.</div>
+        <div style = "background-color: rgb(64, 186, 231);" class="box">1.</div>
+        <div style = "background-color: rgb(215, 158, 51);" class="box">7.</div>
+        <div style = "background-color: rgb(38, 117, 125);" class="box">8.</div>
+        <div style = "background-color: brown;" class="box">9.</div>
+    </div>
+</body>
+</html>
