@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .coffee-name {
+            display: flex;
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .card {
+            /* align-items: space-between; */
+            background-color: white;
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px;
+            text-align: left;
+            box-shadow: 5px 5px 10px gray;
+            border-radius: 10px;
+        }
+
+        .container {
+            
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            width: 1000px;
+            margin: auto;
+            gap: 30px;
+            background-color: #F7F3EC;
+            padding-left: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            color: gray;
+        }
+
+        .coffee-name :nth-child(2) {
+            color: rgb(178, 99, 90);
+        }
+        .webpage {
+            background-color: white;
+            padding: 50px 0px;
+            height: 100vh;
+        }
+        @media(max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 300px);
+                width: 700px;
+
+            }
+        }
+        @media(max-width: 320px) {
+            .container {
+                grid-template-columns: repeat(1, 300px);
+                width: 350px;
+
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="webpage">
+    <div class="container">
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Cappuccino</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Americano</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Espresso</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Macchiato</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Mocha</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Coffee Latte</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Piccolo Latte</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Ristretto</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div class="card">
+            <div class="coffee-name">
+                <h3>Affogato</h3>
+                <h3>$49</h3>
+
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
