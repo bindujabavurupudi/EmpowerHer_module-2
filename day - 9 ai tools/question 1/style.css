@@ -1,0 +1,434 @@
+/* ==========================================
+   CSS Variables & Theme
+   ========================================== */
+:root {
+  --primary: #0f172a;
+  --secondary: #1e293b;
+  --accent: #00d4ff;
+  --accent-dark: #0099cc;
+  --text: #f1f5f9;
+  --text-muted: #cbd5e1;
+  --border: #334155;
+  --spacing-unit: 1rem;
+}
+
+/* ==========================================
+   Reset & Base Styles
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--primary);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ==========================================
+   Container
+   ========================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+/* ==========================================
+   Header
+   ========================================== */
+.header {
+  background-color: var(--secondary);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent) 0%, #0099cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.hero {
+  padding: 8rem var(--spacing-unit) 6rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--accent) 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* CTA Button */
+.cta-button {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: var(--primary);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.5);
+}
+
+/* ==========================================
+   About Section
+   ========================================== */
+.about {
+  padding: 6rem var(--spacing-unit);
+  background-color: var(--primary);
+}
+
+.about-text {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   Skills Section
+   ========================================== */
+.skills {
+  padding: 6rem var(--spacing-unit);
+  background-color: var(--secondary);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--text);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background-color: var(--primary);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.skill-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+.skill-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================
+   Contact Section
+   ========================================== */
+.contact {
+  padding: 6rem var(--spacing-unit);
+  background-color: var(--primary);
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+.footer {
+  background-color: var(--secondary);
+  border-top: 1px solid var(--border);
+  padding: 2rem var(--spacing-unit);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.active {
+    max-height: 300px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 1rem var(--spacing-unit);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .header {
+    position: sticky;
+  }
+
+  .hero {
+    padding: 4rem var(--spacing-unit) 3rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .about,
+  .skills,
+  .contact {
+    padding: 4rem var(--spacing-unit);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .social-links {
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
