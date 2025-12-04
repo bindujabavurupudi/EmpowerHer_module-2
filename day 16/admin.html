@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management Page</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="index" style="text-align: center;">
+    <h1 style="text-align: center;" id="welcome">Welcome to Book Management Page</h1><br><br>
+
+    <div class="page">
+    <div class="sidebar">
+    <input type="text" placeholder="Enter the title" id="title"><br><br>
+    <input type="text" placeholder="Enter the Author" id="author"><br><br>
+    <p>select category</p><br>
+    <select id="category">
+        <option>--select--</option>
+        <option>Fiction</option>
+        <option>Comedy</option>
+        <option>Technical</option>
+    </select><br><br>
+    <button id="add">Add Book</button><br><br>
+    <button onclick="Sort()">Sort by Title A → Z</button><br><br>
+    <button onclick="revSort()">Sort by Title Z → A</button><br><br>
+    <p>Filter by category</p><br>
+    <select onclick="filter()" id="filter">
+        <option>All</option>
+        <option>Fiction</option>
+        <option>Comedy</option>
+        <option>Technical</option>
+    </select>
+    </div>
+    <div id="container">
+</div>
+    </div>
+<footer><div class="index" style="text-align: center;">
+   
+    <button onclick="homePage()">Go to Home Page</button></footer>
+</body>
+<script src="admin.js"></script>
+</html>

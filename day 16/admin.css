@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,220px);
+    width: 500px;
+    gap: 15px;
+
+}
+.page{
+    display: flex;
+
+}
+.box {
+    border: 1px solid #ccc;
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+    background: #f7f7f7;
+    box-shadow: 1px 1px 1px;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 200px;
+    box-shadow: 1px 1px 1px;
+    
+    
+}
+
+#welcome{
+    padding: 20px;
+
+    background-color: black;
+    color: white;
+}
