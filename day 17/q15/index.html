@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        #taskInput, #searchInput {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .btn {
+            padding: 6px 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            border-radius: 4px;
+        }
+        .btn-complete {
+            background-color: green;
+        }
+        .btn-delete {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enhanced Todo List</h2>
+
+    <input id="taskInput" type="text" placeholder="Add a new task...">
+    <button onclick="addTask()">Add Task</button>
+
+    <br><br>
+
+    <input id="searchInput" type="text" placeholder="Search tasks..." onkeyup="searchTasks()">
+
+    <div id="taskList"></div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
